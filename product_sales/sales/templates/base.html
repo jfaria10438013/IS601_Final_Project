@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% csrf_token %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+  <nav class="navbar">
+
+   <!-- Cart count -->
+    <div class="cart-info">
+      <p><span id="cart-count">Items in cart: 0</span></p>
+    </div>
+
+    <!-- Nav list -->
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'cart' %}">Cart</a></li>
+    </ul>    
+
+    <!-- Account dropdown and sign out -->
+   {% if user.is_authenticated %}
+   <div class="account-info">
+     <p class="username">Signed in as: {{ user.username }}</p>
+     <form action="{% url 'logout' %}" method="POST">
+       {% csrf_token %}
+       <button type="submit" class="logout-btn">Sign Out</button>
+     </form>
+   </div>
+   {% endif %}
+          
+    </nav>
+  <!-- End Navbar -->
+
+      <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

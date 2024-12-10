@@ -1,0 +1,137 @@
+[
+  {
+	 "id": 1,
+	 "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/001.png",
+    "name": "Bulbasaur",
+	  "category": "feeder",
+    "description": "Has ability to grow cabbage on its back",
+    "count": 0,
+    "price": 10
+  },
+  {
+    "id": 2,
+    "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/002.png",
+     "name": "Ivysaur",
+     "category": "Defender",
+     "description": "Has ability to grow medium cabbage on its back",
+     "count": 0,
+     "price": 20
+   },
+   {
+    "id": 3,
+    "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/003.png",
+     "name": "Venusaur",
+     "category": "Protector",
+     "description": "Has ability to grow large cabbage on its back",
+     "count": 0,
+     "price": 30
+   },
+   {
+    "id": 4,
+    "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/004.png",
+     "name": "Charmander",
+     "category": "feeder",
+     "description": "Has ability to produce small fire from its tail",
+     "count": 0,
+     "price": 11
+   },
+   {
+     "id": 5,
+     "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/005.png",
+      "name": "Charmeleon",
+      "category": "Defender",
+      "description": "Has ability to produce medium fire from its tail",
+      "count": 0,
+      "price": 21
+    },
+    {
+     "id": 6,
+     "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/006.png",
+      "name": "Charizard",
+      "category": "Protector",
+      "description": "Has ability to produce large fire from its tail",
+      "count": 0,
+      "price": 31
+    },
+    {
+      "id": 7,
+      "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/007.png",
+       "name": "Squirtle",
+       "category": "feeder",
+       "description": "Has ability to revolve on its small back",
+       "count": 0,
+       "price": 12
+     },
+     {
+       "id": 8,
+       "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/008.png",
+        "name": "Wartortle",
+        "category": "Defender",
+        "description": "Has ability to revolve on its medium back",
+        "count": 0,
+        "price": 22
+      },
+      {
+       "id": 9,
+       "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/009.png",
+        "name": "Blastoise",
+        "category": "Protector",
+        "description": "Has ability to revolve on its large back",
+        "count": 0,
+        "price": 32
+      },
+      {
+        "id": 10,
+        "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/010.png",
+         "name": "Caterpie",
+         "category": "feeder",
+         "description": "Has ability to fly on low ground",
+         "count": 0,
+         "price": 13
+       },
+       {
+         "id": 11,
+         "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/011.png",
+          "name": "Metapod",
+          "category": "Defender",
+          "description": "Has ability to fly on medium ground",
+          "count": 0,
+          "price": 23
+        },
+        {
+         "id": 12,
+         "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/012.png",
+          "name": "Butterfree",
+          "category": "Protector",
+          "description": "Has ability to fly on high ground",
+          "count": 0,
+          "price": 33
+        },
+        {
+          "id": 13,
+          "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/013.png",
+           "name": "Weedie",
+           "category": "feeder",
+           "description": "Has ability to give a small red face",
+           "count": 0,
+           "price": 14
+         },
+         {
+           "id": 14,
+           "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/014.png",
+            "name": "Kakuna",
+            "category": "Defender",
+            "description": "Has ability to give a medium red face",
+            "count": 0,
+            "price": 24
+          },
+          {
+           "id": 15,
+           "image": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/015.png",
+            "name": "Beedrill",
+            "category": "Protector",
+            "description": "Has ability to give a large red face",
+            "count": 0,
+            "price": 34
+          }          
+]

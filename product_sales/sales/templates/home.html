@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<script src="{% static 'js/script.js' %}"></script>
+
+<div class="toolbar">
+  <form action="{% url 'home' %}" method="get" class="search-form">
+    <!-- Search bar -->
+    <input type="text" name="search" placeholder="Search..." id="search-input" value="{{ request.GET.search }}">
+    
+
+    <!-- Price filter -->
+    <select name="price" class="filter-price">
+      <option value="">Price</option>
+      <option value="asc" {% if request.GET.price == 'asc' %}selected{% endif %}>Low to High</option>
+      <option value="desc" {% if request.GET.price == 'desc' %}selected{% endif %}>High to Low</option>
+    </select>
+
+    <!-- Type filter -->
+    <select name="category" class="filter-category">
+      <option value="">Type</option>
+      <option value="feeder" {% if request.GET.category == 'feeder' %}selected{% endif %}>Feeder</option>
+      <option value="Defender" {% if request.GET.category == 'Defender' %}selected{% endif %}>Defender</option>
+      <option value="Protector" {% if request.GET.category == 'Protector' %}selected{% endif %}>Protector</option>
+    </select>
+
+    <!-- Search button -->
+    <button type="submit" class="search-btn">Search</button>
+
+    <!-- Clear filters button -->
+    <button type="button" class="clear-filters-btn">Clear Filters</button>
+  </form>  
+</div>
+
+<div class="cards">
+  {%for item in items %}
+  <article class="card">
+    <img src="{{item.image}}" alt="car image" />
+    <div class="content">
+      <h2>{{item.name}}</h2>
+      <h3>{{item.category}}</h3>
+
+      <p>{{item.description}}</p>
+      <p>${{item.price}}</p>
+      <div>
+        <button onclick="decCount({{item.id}})">-</button>
+        <span id="{{item.id}}">{{item.count}}</span>
+        <button onclick="incCount({{item.id}})">+</button>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% csrf_token %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit</title>
+    <link rel="stylesheet" href="{% static 'css/submit.css' %}" />
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  <body>
+    
+      {% if items %}
+      <h1>Thank You! Your order has been placed!</h1>
+      {%for item in items %}
+      <div class="cards">
+      <article class="card">
+        <img src="{{item.image}}" alt="car image" />
+        <div class="content">
+          <h2>{{item.name}} / {{ item.category }}</h2>
+          <h2>{{item.count}}</h2>
+        </div>
+      </article>    
+      </div>
+      {% endfor %} 
+      <div class="total-container">
+        <p id="total-price">Total: ${{ total }}</p>
+      </div>
+      {% else %}
+      <h1>No items are selected!</h1>
+      {% endif %}
+      <div class="back-btn">
+        <button onclick="resetAllCounts(); window.location.href='/home';">
+          Back to Home
+        </button>
+      </div>
+  </body>
+</html>

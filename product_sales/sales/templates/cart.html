@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}" />
+<script src="{% static 'js/script.js' %}"></script>
+
+<div class="cards">
+  {% if items %} {% for item in items %}
+  <article class="card" id="item-{{ item.id }}">
+    <div class="item-image">
+      <img src="{{ item.image }}" alt="Item image" />
+    </div>
+
+    <div class="content">
+      <h2>{{ item.name }} / {{ item.category }}</h2>
+      <p>${{item.price}} ea.</p>
+      <div class="item-buttons">
+        <button onclick="decCount({{ item.id }})">-</button>
+        <span id="{{ item.id }}">{{ item.count }}</span>
+        <button onclick="incCount({{ item.id }})">+</button>
+      </div>
+      <button onclick="removeFromCart({{ item.id }})" class="remove-btn">
+        🚮
+      </button>
+    </div>
+  </article>
+  {% endfor %}
+  <div class="total-container">
+    <p id="total-price">Total: ${{ total }}</p>
+  </div>
+  <button onclick="window.location.href='/submit'" class="submit-btn">
+    Purchase
+  </button>
+  {% else %}
+  <h1>Your cart is empty!</h1>
+  {% endif %}
+</div>
+
+{% endblock %}

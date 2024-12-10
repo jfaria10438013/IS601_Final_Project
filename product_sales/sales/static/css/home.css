@@ -1,0 +1,85 @@
+/* items */
+.cards {
+  max-width: 700px;
+  margin: 1em auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  border: 1px solid #999;
+  border-radius: 3px;
+  height: 30em;
+
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+}
+
+
+.search-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+}
+
+.search-btn:hover {
+  background-color: #3d9640;
+}
+
+.filter-price, .filter-category {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.filter-price {
+  width: 160px;
+}
+
+.filter-category {
+  width: 140px;
+}
+
+/* Clear filters button */
+.clear-filters-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+}
+
+.clear-filters-btn:hover {
+  background-color: #e53935;
+}
+
+.toolbar > form {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}

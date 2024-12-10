@@ -1,0 +1,42 @@
+body{
+    font: 1.2em sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d0d0d0;
+    display: inline-block;
+    width: 100%;
+}
+
+.cards {
+    background-color: rgb(255, 255, 255);
+    height: 7em;
+}
+
+.card{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 3px black;
+    margin: 10px;
+    height: 100px;
+}
+
+.h2{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.total-container{
+    color: rgb(168, 0, 0);
+    margin: 0;
+    font-size: 1.5em;
+    margin-left: 40px;
+}
+
+.back-btn {
+    margin-left: 40px;
+}
+
+.back-btn button{
+    font-size: 1.2em;
+}

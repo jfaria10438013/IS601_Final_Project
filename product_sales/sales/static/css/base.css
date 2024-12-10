@@ -1,0 +1,92 @@
+body{
+    font: 1.2em sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d0d0d0;
+    overflow-x: hidden; /* prevent side scrolling */
+    display: inline-block;
+    width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Account info and sign out styles */
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align account info to the left */
+    color: white;
+  }
+  
+  .username {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #555;
+  }
+  
+  /* Navbar links styles */
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the items */
+    flex-grow: 1; /* Allow this section to grow and take up remaining space */
+  }
+  
+  .nav-item {
+    display: inline;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  
+  .nav-link:hover {
+    color: #333;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Cart info styles */
+  .cart-info {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: auto;
+    display: inline;
+    align-items: center;
+  }
